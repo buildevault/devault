@@ -1,0 +1,581 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #6e6e73;
+    font-size: 1rem;
+}
+
+/* ================== */
+
+/* Section formatting */
+
+/* ================== */
+
+.dropdown-section,
+.empty-section {
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.dropdown-header,
+.empty-section h2 {
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 1px solid #e5e5e7;
+}
+
+.dropdown-header h2 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.dropdown-content {
+    padding: 20px;
+}
+
+.dropdown-content.collapsed {
+    display: none;
+}
+
+.section-content {
+    padding: 20px;
+}
+
+/* ====================== */
+
+/* New task form elements */
+
+/* ====================== */
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-title,
+.input-description,
+.input-date,
+.input-branch,
+.input-github,
+.snippet-textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background: #fff;
+}
+
+/* Avoid description field to exceed width size */
+.input-description {
+    resize: vertical;
+}
+
+/* ======================== */
+
+/* Developer options button */
+
+/* ======================== */
+
+.nested-dropdown {
+    border: 1px solid #e5e5e7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nested-header {
+    padding: 12px 16px;
+    background: #fafafa;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.nested-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6e6e73;
+}
+
+.nested-content {
+    padding: 20px;
+    border-top: 1px solid #e5e5e7;
+}
+
+.nested-content.collapsed {
+    display: none;
+}
+
+.option-description {
+    font-size: 0.85rem;
+    color: #6e6e73;
+    margin: 4px 0 12px 0;
+}
+
+.option-separator {
+    height: 1px;
+    background: #e5e5e7;
+    margin: 24px 0;
+}
+
+/* ============= */
+
+/* App selector */
+
+/* ============ */
+
+.app-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.app-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border: 2px solid #e5e5e7;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 80px;
+}
+
+.app-card.selected {
+    border-color: #0071e3;
+}
+
+.app-icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.app-name {
+    font-size: 0.75rem;
+    color: #6e6e73;
+    margin-top: 6px;
+    text-align: center;
+}
+
+/* =========== */
+
+/* Todo finder */
+
+/* =========== */
+
+.scanner-section {
+    margin-bottom: 16px;
+}
+
+.btn-scan {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    background: #f5f5f7;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.todo-results {
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+}
+
+.results-header h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* === */
+
+/* Git */
+
+/* === */
+
+.branch-input-group {
+    margin-bottom: 12px;
+}
+
+.github-info-section {
+    margin-top: 12px;
+}
+
+.github-inputs {
+    display: flex;
+    gap: 12px;
+}
+
+.github-inputs .input-github {
+    flex: 1;
+}
+
+/* ======= */
+
+/* Version */
+
+/* ======= */
+
+.version-tracker {
+    margin-top: 8px;
+}
+
+.version-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.version-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-auto-detect,
+.btn-add-version {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #d2d2d7;
+    color: #1f1f1d;
+}
+
+/* ============ */
+
+/* Code snippet */
+
+/* ============ */
+
+.snippet-editor {
+    margin-top: 8px;
+}
+
+.snippet-textarea {
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+    font-size: 0.85rem;
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* ============= */
+
+/* Submit button */
+
+/* ============= */
+
+.btn-submit {
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* =============== */
+
+/* Individual task */
+
+/* =============== */
+
+.task-card {
+    border: 1px solid #e5e5e7;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.task-card.completed {
+    opacity: 0.6;
+    background: #fafafa;
+}
+
+/* When done, the title of the task is crossed out as if with a pencil */
+.task-card.completed .task-title {
+    text-decoration: line-through;
+    color: #6e6e73;
+}
+
+.task-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.task-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    word-wrap: break-word;
+}
+
+.task-description {
+    font-size: 0.9rem;
+    color: #6e6e73;
+    margin-bottom: 12px;
+}
+
+/* ========================== */
+
+/* Code snippet inside a task */
+
+/* =========================== */
+
+.task-snippet-container {
+    background: #1d1d1f;
+    border-radius: 8px;
+    margin: 12px 0;
+    overflow: hidden;
+}
+
+.task-snippet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #2d2d2f;
+}
+
+.snippet-label {
+    font-size: 0.75rem;
+    color: #a1a1a6;
+    letter-spacing: 0.5px;
+}
+
+.btn-copy-snippet,
+.btn-copy-branch {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    background: transparent;
+    color: #a1a1a6;
+    border: 1px solid #6e6e73;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.task-snippet {
+    padding: 12px;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.task-snippet code {
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #e5e5e7;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* ======================== */
+
+/* Git branch inside a task */
+
+/* ======================== */
+
+.task-branch-container {
+    background: #f5f5f7;
+    border-radius: 8px;
+    margin: 12px 0;
+    overflow: hidden;
+}
+
+.task-branch-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #e8e8ed;
+}
+
+.branch-label {
+    font-size: 0.75rem;
+    color: #6e6e73;
+    letter-spacing: 0.5px;
+}
+
+.branch-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-github-link {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    background: #24292e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.task-branch-name {
+    padding: 10px 12px;
+    font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #1d1d1f;
+}
+
+/* ===================== */
+
+/* Version inside a task */
+
+/* ===================== */
+
+.task-versions-container {
+    margin: 12px 0;
+}
+
+.version-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.version-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    background: #e8f2ff;
+    color: #000000;
+    border-radius: 12px;
+}
+
+/* ====================== */
+
+/* Due date inside a task */
+
+/* ====================== */
+
+.task-due-date {
+    font-size: 0.85rem;
+    color: #6e6e73;
+}
+
+/* ================= */
+
+/* APP inside a task */
+
+/* ================= */
+
+.task-app-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.task-app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ====================== */
+
+/* Buttons inside a task */
+
+/* ===================== */
+
+.task-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* "text-decoration: none" allow to remove the hyperlink underline of the button (since it does an URL redirection) */
+.btn-action {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    background: #f5f5f7;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* ============== */
+
+/* Responsiveness */
+
+/* ============== */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 16px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .github-inputs {
+        flex-direction: column;
+    }
+
+    .task-content-wrapper {
+        flex-direction: column;
+    }
+
+    .task-actions {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
